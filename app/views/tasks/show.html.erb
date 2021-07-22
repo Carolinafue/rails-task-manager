@@ -1,3 +1,14 @@
+<h1>tarea</h1>
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 <p><%= @task.completed %></p>
+
+<h2><%= link_to "volver", tasks_path %></h2>
+
+<p><%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "estas seguro de borrar?" } %>
+<p></p>
+
+<p><%= link_to "editar tarea", edit_task_path %>
