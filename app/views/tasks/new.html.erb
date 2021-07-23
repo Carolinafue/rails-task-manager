@@ -2,4 +2,7 @@
 
 <%= render "form", task: @task %>
 
-<p><%= link_to "volver a la lista", tasks_path %>
+<hr>
+<%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> volver a la lista
+<% end %>
